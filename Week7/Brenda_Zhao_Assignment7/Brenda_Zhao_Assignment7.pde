@@ -1,3 +1,13 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+Minim minim;//use the minim from the library
+AudioPlayer song;//upload the song from the file
+
 import peasy.*; 
 PeasyCam cam; // initialize camera
  
@@ -15,6 +25,9 @@ float rotX, rotY, rotZ, camX, camY, camZ; // rotation and translation of navigat
 
 void setup(){
    size(900,700, P3D); //window size and make 3d project
+   minim = new Minim(this);//setup the sound library
+   song= minim.loadFile("music.mp3");//upload the song 
+   song.loop();
    background(0);//background color
     
    // initialize and position peasy cam

@@ -17,10 +17,10 @@ void nav() {
       }
     }
     if (key == 'w') {
-      camZ+=10; // increase navigation z position by 10
+      camZ+=5; // increase navigation z position by 10
     }
     if (key == 's') {
-      camZ-=10; // decrease navigation z position by 10
+      camZ-=5; // decrease navigation z position by 10
     }
   }
 }
